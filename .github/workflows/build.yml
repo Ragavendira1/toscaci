@@ -60,17 +60,17 @@ jobs:
         with:
           path: tosca-installer
           key: tosca-setup-${{ needs.build_tosca_server.outputs.cacheKey }}
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         name: Download toscactl
         with:
           name: toscactl-windows-amd64_${{ needs.precheck.outputs.full_version }}
           path: cli
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         name: Download toscaci-service
         with:
           name: toscaci-service-windows-amd64_${{ needs.precheck.outputs.full_version }}
           path: toscaci-service
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         name: Download toscacommander-addon
         with:
           name: toscacommander-addon-windows-amd64_${{ needs.precheck.outputs.full_version }}
